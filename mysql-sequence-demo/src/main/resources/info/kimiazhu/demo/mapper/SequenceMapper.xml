@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="info.kimiazhu.demo.mapper.SequenceMapper">
+
+    <select id="nextValue" resultType="int">
+        select nextval(#{0}); 
+    </select>
+    
+    <select id="currentValue" resultType="int">
+        select currval(#{0}); 
+    </select>
+    
+    <select id="setValue" resultType="int">
+        select setval(#{0}, #{1}); 
+    </select>
+
+</mapper>
